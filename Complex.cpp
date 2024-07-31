@@ -1,11 +1,11 @@
-// ID: 315233486
-// Mail: Eilonashwal30@gmail.com
+// ID: 207192246
+// Mail: ShayNamir@gmail.com
 
 #include <cmath>
 #include <stdexcept>
 #include "Complex.hpp"
 
-// Default constructor - initializes the complex number to 0 + 0i
+// initializes the complex number to 0 + 0i
 Complex::Complex() : real(0), imag(0) {}
 
 // Parameterized constructor - initializes the complex number to real + imag*i
