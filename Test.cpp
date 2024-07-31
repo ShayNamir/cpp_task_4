@@ -49,7 +49,7 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
     
     SUBCASE("Pre-order Traversal") // Check the pre-order traversal
     {
-        vector<int> expected = {1, 2, 4, 5, 3, 6, 7};
+        vector<int> expected = {10, 20, 40, 50, 30, 60, 70};
         vector<int> actual;
 
         // Iterate over the tree using pre-order traversal
@@ -64,7 +64,7 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
 
     SUBCASE("Post-order Traversal") // Check the post-order traversal
     {
-        vector<int> expected = {4, 5, 2, 6, 7, 3, 1};
+        vector<int> expected = {40, 50, 20, 60, 70, 30, 10};
         vector<int> actual;
 
         // Iterate over the tree using post-order traversal
@@ -79,7 +79,7 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
 
     SUBCASE("In-order Traversal") // Check the in-order traversal
     {
-        vector<int> expected = {4, 2, 5, 1, 6, 3, 7};
+        vector<int> expected = {40, 20, 50, 10, 60, 30, 70};
         vector<int> actual;
 
         // Iterate over the tree using in-order traversal
@@ -94,7 +94,7 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
 
     SUBCASE("BFS Traversal") // Check the BFS traversal
     {
-        vector<int> expected = {1, 2, 3, 4, 5, 6, 7};
+        vector<int> expected = {10, 20, 30, 40, 50, 60, 70};
         vector<int> actual;
 
         // Iterate over the tree using BFS traversal
