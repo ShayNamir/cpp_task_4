@@ -16,18 +16,18 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
     Tree<int> default_Tree;
 
     // Create a root node with value 20
-    auto root = make_unique<Node<int>>(1);
+    auto root = make_unique<Node<int>>(10);
 
     // Add the root node to the default_Tree
     default_Tree.add_root(move(root));
 
     // Create child nodes 
-    auto child1 = make_unique<Node<int>>(2);
-    auto child2 = make_unique<Node<int>>(3);
-    auto child3 = make_unique<Node<int>>(4);
-    auto child4 = make_unique<Node<int>>(5);
-    auto child5 = make_unique<Node<int>>(6);
-    auto child6 = make_unique<Node<int>>(7);
+    auto child1 = make_unique<Node<int>>(20);
+    auto child2 = make_unique<Node<int>>(30);
+    auto child3 = make_unique<Node<int>>(40);
+    auto child4 = make_unique<Node<int>>(50);
+    auto child5 = make_unique<Node<int>>(60);
+    auto child6 = make_unique<Node<int>>(70);
 
     // Add the child nodes to the default_Tree on specific ways
     default_Tree.add_sub_node(*default_Tree.get_root(), move(child1));
@@ -39,11 +39,11 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
 
     //the tree should look like this:
     /*
-            1
-           / \
-          2   3
-         / \ / \
-        4  5 6  7   
+            10
+           /  \
+          20   30
+         /  \ /  \
+        40 50 60 70   
     */
 
     
