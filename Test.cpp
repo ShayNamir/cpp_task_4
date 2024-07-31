@@ -109,7 +109,7 @@ TEST_CASE("build a default_Tree with integers and check the traversals (pre-orde
 
     SUBCASE("DFS Traversal") // Check the DFS traversal
     {
-        vector<int> expected = {1, 2, 4, 5, 3, 6, 7};
+        vector<int> expected = {10, 20, 40, 50, 30, 60, 70};
         vector<int> actual;
 
         // Iterate over the tree using DFS traversal
