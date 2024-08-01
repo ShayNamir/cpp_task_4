@@ -321,4 +321,42 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
         // Check if the actual traversal is equal to the expected one
         CHECK(actual == expected);
     }
+
+    TEST_CASE("MinHeap")
+    {
+         // Create a three_string_Tree with strings and maximum 3 children
+        Tree<int, 2> minHeap_Tree;
+
+        // Create a root node with value "Am"
+        auto root = make_unique<Node<string>>(3);
+
+        // Add the root node to the three_string_Tree
+        minHeap_Tree.add_root(move(root));
+
+        // Create child nodes
+        auto child1 = make_unique<Node<string>>(1);
+        auto child2 = make_unique<Node<string>>(2);
+
+        // Add the child nodes to the three_string_Tree on specific ways
+        minHeap_Tree.add_sub_node(*minHeap_Tree.get_root(), move(child1));
+        minHeap_Tree.add_sub_node(*minHeap_Tree.get_root(), move(child2));
+
+        // The tree should look like this:
+        /*
+                    3
+               /       |       
+              1         2
+        */
+
+        //Min Heap travel
+        vector<int> expected = {1, 2, 3};
+        vector<int> actual;
+
+        for(auto it = minHeap_Tree.begin_heap(); it != minHeap_Tree.end_heap(); ++it)
+        {
+            actual.push_back(it->get_value());
+        }
+
+        CHECK(actual == expected);
+    }
 }
