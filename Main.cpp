@@ -14,20 +14,20 @@ int main()
     // Create a 3-ary tree that contains integers.
     Tree<int, 3> three_Tree;
     
-    // Create the root node with the value 1 and add it to the tree.
-    auto root_three_Tree = make_unique<Node<int>>(1);
+    // Create the root node with the value 11 and add it to the tree.
+    auto root_three_Tree = make_unique<Node<int>>(11);
     three_Tree.add_root(move(root_three_Tree));
 
     // Create additional nodes with integer values
-    auto child1 = make_unique<Node<int>>(2);
-    auto child2 = make_unique<Node<int>>(3);
-    auto child3 = make_unique<Node<int>>(4);
-    auto child4 = make_unique<Node<int>>(5);
-    auto child5 = make_unique<Node<int>>(6);
-    auto child6 = make_unique<Node<int>>(7);
-    auto child7 = make_unique<Node<int>>(8);
-    auto child8 = make_unique<Node<int>>(9);
-    auto child9 = make_unique<Node<int>>(10);
+    auto child1 = make_unique<Node<int>>(12);
+    auto child2 = make_unique<Node<int>>(13);
+    auto child3 = make_unique<Node<int>>(14);
+    auto child4 = make_unique<Node<int>>(15);
+    auto child5 = make_unique<Node<int>>(16);
+    auto child6 = make_unique<Node<int>>(17);
+    auto child7 = make_unique<Node<int>>(18);
+    auto child8 = make_unique<Node<int>>(19);
+    auto child9 = make_unique<Node<int>>(20);
 
     // Add sub-nodes to the tree in a specific order
     three_Tree.add_sub_node(*three_Tree.get_root(), move(child1));
@@ -43,13 +43,13 @@ int main()
     // Draw the tree
     three_Tree.drawTree();
 
-    // the tree should look like:
+    // The tree should look like:
     /*
-     *       root = 1
+     *       root = 11
      *     /       |       \
-     *     2       3       4
+     *     12      13      14
      *   /  \    /  \    /  \
-     *  5    6  7    8  9   10
+     *  15   16 17   18 19  20
      */
 
     // *****************************************************************************************************************
@@ -57,21 +57,21 @@ int main()
     // Create a 5-ary tree that contains Complex numbers.
     Tree<Complex, 5> five_Tree_Complex; 
 
-    // Create the root node with the value (1.1, 2.2) and add it to the tree.
-    auto root__Five_Complex = make_unique<Node<Complex>>(Complex(1.5, 1.75));
+    // Create the root node with the value (2.1, 3.2) and add it to the tree.
+    auto root__Five_Complex = make_unique<Node<Complex>>(Complex(2.1, 3.2));
 
     // Add the root node to the tree
     five_Tree_Complex.add_root(move(root__Five_Complex));
      
     // Create additional nodes with complex numbers
-    auto n1 = make_unique<Node<Complex>>(Complex(3.5, 4.75));
-    auto n2 = make_unique<Node<Complex>>(Complex(1.3, 2.5));
-    auto n3 = make_unique<Node<Complex>>(Complex(7.5, 8.75));
-    auto n4 = make_unique<Node<Complex>>(Complex(1.1, 2.2));
-    auto n5 = make_unique<Node<Complex>>(Complex(9.5, 10.75));
-    auto n6 = make_unique<Node<Complex>>(Complex(1.1, 2.2));
-    auto n7 = make_unique<Node<Complex>>(Complex(22.5, 23.75));
-    auto n8 = make_unique<Node<Complex>>(Complex(13.1, 12.2));
+    auto n1 = make_unique<Node<Complex>>(Complex(4.5, 5.5));
+    auto n2 = make_unique<Node<Complex>>(Complex(2.3, 3.3));
+    auto n3 = make_unique<Node<Complex>>(Complex(8.5, 9.5));
+    auto n4 = make_unique<Node<Complex>>(Complex(2.2, 3.3));
+    auto n5 = make_unique<Node<Complex>>(Complex(10.5, 11.5));
+    auto n6 = make_unique<Node<Complex>>(Complex(2.4, 3.4));
+    auto n7 = make_unique<Node<Complex>>(Complex(23.5, 24.5));
+    auto n8 = make_unique<Node<Complex>>(Complex(14.1, 13.2));
 
     // Add sub-nodes to the tree in a specific order
     five_Tree_Complex.add_sub_node(*five_Tree_Complex.get_root(), move(n1));
@@ -86,33 +86,33 @@ int main()
     // Draw the tree
     five_Tree_Complex.drawTree();
 
-    // the tree should look like:
+    // The tree should look like:
     /*
-     *       root = (1.5, 1.75)
+     *       root = (2.1, 3.2)
      *     /       |       \       |       \
-     *  (3.5, 4.75) (1.3, 2.5) (7.5, 8.75) (1.1, 2.2) (9.5, 10.75)
+     *  (4.5, 5.5) (2.3, 3.3) (8.5, 9.5) (2.2, 3.3) (10.5, 11.5)
      *   /  \    /  \    /  \    /  \    /  \
-     * (1.1, 2.2) (22.5, 23.75) (13.1, 12.2)
+     * (2.4, 3.4) (23.5, 24.5) (14.1, 13.2)
      */
     // *****************************************************************************************************************
 
     // Create a tree that contains integers. The default number of children is 2.
     Tree<int> default_Tree;
 
-    // Create the root node with the value 1 and add it to the tree.
-    auto root_default_Tree = make_unique<Node<int>>(1);
+    // Create the root node with the value 21 and add it to the tree.
+    auto root_default_Tree = make_unique<Node<int>>(21);
 
     // Add the root node to the tree
     default_Tree.add_root(move(root_default_Tree));
 
     // Create additional nodes with integer values
-    auto child10 = make_unique<Node<int>>(2);
-    auto child11 = make_unique<Node<int>>(3);
-    auto child12 = make_unique<Node<int>>(4);
-    auto child13 = make_unique<Node<int>>(5);
-    auto child14 = make_unique<Node<int>>(6);
-    auto child15 = make_unique<Node<int>>(7);
-    auto child16 = make_unique<Node<int>>(8);
+    auto child10 = make_unique<Node<int>>(22);
+    auto child11 = make_unique<Node<int>>(23);
+    auto child12 = make_unique<Node<int>>(24);
+    auto child13 = make_unique<Node<int>>(25);
+    auto child14 = make_unique<Node<int>>(26);
+    auto child15 = make_unique<Node<int>>(27);
+    auto child16 = make_unique<Node<int>>(28);
     
     // Add sub-nodes to the tree in a specific order
     default_Tree.add_sub_node(*default_Tree.get_root(), move(child10));
@@ -126,15 +126,15 @@ int main()
     // Draw the tree
     default_Tree.drawTree(); 
 
-    // the tree should look like:
+    // The tree should look like:
     /*
-     *       root = 1
+     *       root = 21
      *     /       |       
-     *     2       3       
+     *     22      23      
      *   /  \    /  \    
-     *  4    5  6    7
+     *  24   25 26   27
      *           /
-     *          8
+     *          28
      */
 
     // Print the tree using different iterators
@@ -142,7 +142,7 @@ int main()
     cout<<endl; 
     cout << " default_Tree: " << endl;
 
-    //PreOrder: 1, 2, 4, 5, 3, 6, 8, 7
+    //PreOrder: 21, 22, 24, 25, 23, 26, 28, 27
     cout << "PreOrder: ";
     for (auto node = default_Tree.begin_pre_order(); node != default_Tree.end_pre_order(); ++node)
     {
@@ -150,7 +150,7 @@ int main()
     }
     cout << endl;
     
-    //PostOrder: 4, 5, 2, 8, 6, 7, 3, 1
+    //PostOrder: 24, 25, 22, 28, 26, 27, 23, 21
     cout << "PostOrder: ";
     for (auto node = default_Tree.begin_post_order(); node != default_Tree.end_post_order(); ++node)
     {
@@ -158,7 +158,7 @@ int main()
     }
     cout << endl;
 
-    //InOrder: 4, 2, 5, 1, 6, 3, 7, 8
+    //InOrder: 24, 22, 25, 21, 26, 23, 27, 28
     cout << "InOrder: ";
     for (auto node = default_Tree.begin_in_order(); node != default_Tree.end_in_order(); ++node)
     {
@@ -166,7 +166,7 @@ int main()
     } 
     cout << endl;
 
-    //BFS: 1, 2, 3, 4, 5, 6, 7, 8
+    //BFS: 21, 22, 23, 24, 25, 26, 27, 28
     cout << "BFS: ";
     for (auto node = default_Tree.begin_bfs(); node != default_Tree.end_bfs(); ++node)
     {
@@ -174,7 +174,7 @@ int main()
     }
     cout << endl;
 
-    //DFS: 1, 2, 4, 5, 3, 6, 8, 7
+    //DFS: 21, 22, 24, 25, 23, 26, 28, 27
     cout << "DFS: ";
     for (auto node = default_Tree.begin_dfs(); node != default_Tree.end_dfs(); ++node)
     {
@@ -182,7 +182,7 @@ int main()
     } 
     cout << endl;
 
-    //Heap Iterator: 1, 2, 3, 4, 5, 6, 7, 8
+    //Heap Iterator: 21, 22, 23, 24, 25, 26, 27, 28
     cout << "Heap Iterator: ";
     for (auto node = default_Tree.begin_heap(); node != default_Tree.end_heap(); ++node)
     {
