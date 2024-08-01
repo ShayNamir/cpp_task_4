@@ -245,24 +245,24 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
     // Create a three_string_Tree with strings and maximum 3 children
     Tree<string, 3> three_string_Tree;
 
-    // Create a root node with value "Hello"
-    auto root = make_unique<Node<string>>(string("Hello,"));
+    // Create a root node with value "Am"
+    auto root = make_unique<Node<string>>(string("Am"));
 
     // Add the root node to the three_string_Tree
     three_string_Tree.add_root(move(root));
 
     // Create child nodes
-    auto child1 = make_unique<Node<string>>(string("my"));
-    auto child2 = make_unique<Node<string>>(string("name"));
-    auto child3 = make_unique<Node<string>>(string("is"));
-    auto child4 = make_unique<Node<string>>(string("Eilon"));
-    auto child5 = make_unique<Node<string>>(string("Ashwal"));
-    auto child6 = make_unique<Node<string>>(string("and"));
-    auto child7 = make_unique<Node<string>>(string("I"));
-    auto child8 = make_unique<Node<string>>(string("am"));
-    auto child9 = make_unique<Node<string>>(string("25"));
-    auto child10 = make_unique<Node<string>>(string("years"));
-    auto child11 = make_unique<Node<string>>(string("old"));
+    auto child1 = make_unique<Node<string>>(string("Israel"));
+    auto child2 = make_unique<Node<string>>(string("hai"));
+    auto child3 = make_unique<Node<string>>(string("cant"));
+    auto child4 = make_unique<Node<string>>(string("be"));
+    auto child5 = make_unique<Node<string>>(string("said"));
+    auto child6 = make_unique<Node<string>>(string("on"));
+    auto child7 = make_unique<Node<string>>(string("all"));
+    auto child8 = make_unique<Node<string>>(string("their"));
+    auto child9 = make_unique<Node<string>>(string("enemies"));
+    auto child10 = make_unique<Node<string>>(string("thanks"));
+    auto child11 = make_unique<Node<string>>(string("god"));
     auto child12 = make_unique<Node<string>>(string("!"));
 
     // Add the child nodes to the three_string_Tree on specific ways
@@ -279,13 +279,13 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
     three_string_Tree.add_sub_node(*three_string_Tree.get_root()->get_children()[2], move(child11));
     three_string_Tree.add_sub_node(*three_string_Tree.get_root()->get_children()[2], move(child12));
 
-    //the tree should look like this:
+    // The tree should look like this:
     /*
-                Hello,
+                Am
            /       |       \
-          my     name     is
+      Israel     hai     cant
          /|\     /|\     /|\
-    Eilon Ashwal and I am 25 years old !
+      be said on all their enemies thanks god !
     */
 
     // For 3-ary tree, we have only DFS and BFS traversals
@@ -293,7 +293,7 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
     SUBCASE("BFS Traversal") // Check the BFS traversal
     {
         // The expected BFS traversal
-        vector<string> expected = {"Hello,", "my", "name", "is", "Eilon", "Ashwal", "and", "I", "am", "25", "years", "old", "!"};
+        vector<string> expected = {"Am", "Israel", "hai", "cant", "be", "said", "on", "all", "their", "enemies", "thanks", "god", "!"};
         vector<string> actual;
 
         // Iterate over the tree using BFS traversal
@@ -309,17 +309,16 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
     SUBCASE("DFS Traversal") // Check the DFS traversal
     {
         // The expected DFS traversal
-        vector<string> expected = {"Hello,", "my", "Eilon", "Ashwal", "and", "name", "I", "am", "25", "is", "years", "old", "!"};
+        vector<string> expected = {"Am", "Israel", "be", "said", "on", "hai", "all", "their", "enemies", "cant", "thanks", "god", "!"};
         vector<string> actual;
 
         // Iterate over the tree using DFS traversal
         for (auto it = three_string_Tree.begin_dfs(); it != three_string_Tree.end_dfs(); ++it)
         {
             actual.push_back(it->get_value());
-        }   
+        }
 
         // Check if the actual traversal is equal to the expected one
         CHECK(actual == expected);
     }
-
 }
