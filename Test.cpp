@@ -326,19 +326,19 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
 
 
 TEST_CASE("MinHeap")
-    {
+{
          // Create a three_string_Tree with strings and maximum 3 children
         Tree<int, 2> minHeap_Tree;
 
         // Create a root node with value "Am"
-        auto root = make_unique<Node<string>>(3);
+        auto root = make_unique<Node<int>>(3);
 
         // Add the root node to the three_string_Tree
         minHeap_Tree.add_root(move(root));
 
         // Create child nodes
-        auto child1 = make_unique<Node<string>>(1);
-        auto child2 = make_unique<Node<string>>(2);
+        auto child1 = make_unique<Node<int>>(1);
+        auto child2 = make_unique<Node<int>>(2);
 
         // Add the child nodes to the three_string_Tree on specific ways
         minHeap_Tree.add_sub_node(*minHeap_Tree.get_root(), move(child1));

@@ -304,7 +304,7 @@ template <typename T> class heapIterator
 
                 // sort the heap in descending order by the value of the nodes
                 make_heap(heap.begin(), heap.end(), [](Node<T> *a, Node<T> *b)
-                            { return a->get_value() < b->get_value(); }); // The top of the heap is the node with the smallest value
+                            { return a->get_value() > b->get_value(); }); // put the smallest value at the end of the heap and sort the rest of the heap
             }
         }
         
