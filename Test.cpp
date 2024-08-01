@@ -321,8 +321,11 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
         // Check if the actual traversal is equal to the expected one
         CHECK(actual == expected);
     }
+    
+}
 
-    TEST_CASE("MinHeap")
+
+TEST_CASE("MinHeap")
     {
          // Create a three_string_Tree with strings and maximum 3 children
         Tree<int, 2> minHeap_Tree;
@@ -353,10 +356,7 @@ TEST_CASE("build a three_string_Tree with strings and check the traversals (pre-
         vector<int> actual;
 
         for(auto it = minHeap_Tree.begin_heap(); it != minHeap_Tree.end_heap(); ++it)
-        {
             actual.push_back(it->get_value());
-        }
 
         CHECK(actual == expected);
     }
-}
